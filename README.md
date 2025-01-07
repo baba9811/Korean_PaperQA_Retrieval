@@ -52,7 +52,7 @@ Repository 내 data directory 안의 데이터셋은 총 824,337개의 전체 �
 ```
 
 ### Retrieval Evaluation
-BAAI의 bge-m3 모델과 jinaai의 jina-embeddings-v3를를 original retriever,  
+BAAI의 bge-m3 모델과 jinaai의 jina-embeddings-v3를 original retriever,  
 BM25와 hybrid retrieval 방식으로 비교하였습니다.  
 Hybrid retrieval은 BM25의 weight를 0.2로 설정하여 진행하였습니다.  
 평가지표는 Recall, nDCG, MRR을 사용하였으며, 1만개 데이터셋 총 평가에 걸린 시간입니다.
