@@ -1,4 +1,4 @@
-# PaperQA_Retrieval
+# Korean PaperQA Retrieval
 ### 한국어 embeddig/retrieval evaluation용 데이터셋
 ### 국내논문 QA 데이터셋 사용하여 구축하였습니다.
 ### link: https://aida.kisti.re.kr/data/21b21974-6efd-4581-b9df-699f91f5bc98
