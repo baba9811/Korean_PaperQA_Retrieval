@@ -79,8 +79,8 @@ Hybrid retrieval 최적화를 잘못했는지 원래 느린건지,
 -추가중-  
 다음은 데이터셋 824,337개 전체에 대해 실험한 결과입니다.  
 실험 시간 관계 상 BM25와 hybrid search는 제외하고  
-KURE-v1, bge-m3, jina-embeddings-v3 모델만 비교하였습니다.
-Time은 전체 데이터 평가에 걸린 총 시간의 합입니다.
+KURE-v1, bge-m3, jina-embeddings-v3 모델만 비교하였습니다.  
+Time은 전체 데이터 평가에 걸린 총 시간의 합입니다..
 
 |Model Name|Recall@5(10)|nDCG@5(10)|MRR@5(10)|Time(hour:min.)|
 |---|---|---|---|:---:|
