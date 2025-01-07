@@ -57,7 +57,7 @@ Repository 내 data directory 안의 데이터셋은 총 824,337개의 전체 �
 jinaai의 jina-embeddings-v3를 original retriever,  
 BM25와 hybrid retrieval 방식으로 비교하였습니다.  
 Hybrid retrieval은 BM25의 weight를 0.2로 설정하여 진행하였습니다.  
-평가지표는 Recall, nDCG, MRR을 사용하였으며,  
+평가지표는 Recall, nDCG, MRR을 사용하였으며, 평가 batch_size는 128,  
 Time은 1만개 데이터셋 총 평가에 걸린 시간입니다.
 
 |Model Name|Recall@5(10)|nDCG@5(10)|MRR@5(10)|Time(Sec.)|
@@ -80,7 +80,7 @@ Hybrid retrieval 최적화를 잘못했는지 원래 느린건지,
 다음은 데이터셋 824,337개 전체에 대해 실험한 결과입니다.  
 실험 시간 관계 상 BM25와 hybrid search는 제외하고  
 KURE-v1, bge-m3, jina-embeddings-v3 모델만 비교하였습니다.  
-Time은 전체 데이터 평가에 걸린 총 시간의 합입니다..
+Time은 전체 데이터 평가에 걸린 총 시간의 합입니다.
 
 |Model Name|Recall@5(10)|nDCG@5(10)|MRR@5(10)|Time(hour:min.)|
 |---|---|---|---|:---:|
