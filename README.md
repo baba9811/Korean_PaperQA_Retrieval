@@ -53,7 +53,8 @@ Repository 내 data directory 안의 데이터셋은 총 824,337개의 전체 �
 ```
 
 ### Retrieval Evaluation
-BAAI의 bge-m3 모델과 jinaai의 jina-embeddings-v3를 original retriever,  
+고려대학교 nlpai-lab의 KURE-v1, BAAI의 bge-m3 모델과  
+jinaai의 jina-embeddings-v3를 original retriever,  
 BM25와 hybrid retrieval 방식으로 비교하였습니다.  
 Hybrid retrieval은 BM25의 weight를 0.2로 설정하여 진행하였습니다.  
 평가지표는 Recall, nDCG, MRR을 사용하였으며, 1만개 데이터셋 총 평가에 걸린 시간입니다.
@@ -68,7 +69,8 @@ Hybrid retrieval은 BM25의 weight를 0.2로 설정하여 진행하였습니다.
 |jina-embeddings-v3 + BM25|0.831(0.883)|0.795(0.818)|0.783(0.797)|212|
 |BM25|0.792(0.815)|0.736(0.744)|0.718(0.721)|196|
 
-간단하게 평가를 진행했지만, FlagEmbedding을 사용한 bge-m3 모델의 성능이 가장 높았으며,  
-Hybrid retrieval을 했을 때 오히려 성능이 낮아지는 모습을 보였습니다.  
+간단하게 평가를 진행했지만, 고려대학교에서 발표한 CachedGISTEmbedLoss와  
+hard negative dataset을 이용해서 학습한 KURE-v1 모델이 가장 성능이 높았습니다.  
+또한, Hybrid retrieval을 했을 때 오히려 성능이 낮아지는 모습을 보였습니다.  
 Hybrid retrieval 최적화를 잘못했는지 원래 느린건지,  
 배치처리를 했음에도 검색 시간이 굉장히 길어지는 모습을 보였습니다.
