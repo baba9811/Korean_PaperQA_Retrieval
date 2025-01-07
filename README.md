@@ -50,3 +50,14 @@ Repository 내 data directory 안의 데이터셋은 총 824,337개의 전체 �
         "id": 33
     }
 ```
+
+### Retrieval Evaluation
+Jinaai 의 jina-embeddings-v3와 BAAI의 bge-m3 모델을 original retriever,  
+BM25와 hybrid retrieval 방식으로 비교하였습니다.  
+Hybrid retrieval은 BM25의 weight를 0.2로 설정하여 진행하였습니다.
+
+|Model Name|Recall@5(10)|nDCG@5(10)|MRR@5(10)|
+|---|---|---|---|
+|jinaai/jina-embeddings-v3|0.848(0.891)|0.764(0.778)|0.737(0.742)|
+|jina-embeddings-v3 + BM25|0.831(0.883)|0.795(0.818)|0.783(0.797)|
+|BM25|0.792(0.815)|0.736(0.744)|0.718(0.721)|
