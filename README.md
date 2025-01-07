@@ -3,7 +3,7 @@
 ### 국내논문 QA 데이터셋 사용하여 구축하였습니다.
 ### link: https://aida.kisti.re.kr/data/21b21974-6efd-4581-b9df-699f91f5bc98
 
-기존 국내논문 QA 데이터셋에서 'context', 'qas'를 사용하여 구축하였습니다.  
+기존 국내논문 QA 데이터셋에서 "context", "qas"를 사용하여 구축하였습니다.  
 ```
 "context": "질의응답문장이 포함된 논문 풀텍스트",
 "qas": [
