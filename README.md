@@ -56,8 +56,9 @@ Repository 내 data directory 안의 데이터셋은 총 824,337개의 전체 �
 고려대학교 nlpai-lab의 KURE-v1, BAAI의 bge-m3 모델과  
 jinaai의 jina-embeddings-v3를 original retriever,  
 BM25와 hybrid retrieval 방식으로 비교하였습니다.  
+RTX3090 GPU 1대로 FAISS-GPU를 사용하여 평가하였습니다.  
 Hybrid retrieval은 BM25의 weight를 0.2로 설정하여 진행하였습니다.  
-평가지표는 Recall, nDCG, MRR을 사용하였으며, 평가 batch_size는 128,  
+평가지표는 Recall, nDCG, MRR을 사용하였으며, 평가 batch_size는 8,  
 Time은 1만개 데이터셋 총 평가에 걸린 시간입니다.
 
 |Model Name|Recall@5(10)|nDCG@5(10)|MRR@5(10)|Time(Sec.)|
@@ -73,8 +74,7 @@ Time은 1만개 데이터셋 총 평가에 걸린 시간입니다.
 간단하게 평가를 진행했지만, 고려대학교에서 발표한 CachedGISTEmbedLoss와  
 hard negative dataset을 이용해서 학습한 KURE-v1 모델이 가장 성능이 높았습니다.  
 또한, Hybrid retrieval을 했을 때 오히려 성능이 낮아지는 모습을 보였습니다.  
-Hybrid retrieval 최적화를 잘못했는지 원래 느린건지,  
-배치처리를 했음에도 검색 시간이 굉장히 길어지는 모습을 보였습니다.
+
 
 -추가중-  
 다음은 데이터셋 824,337개 전체에 대해 실험한 결과입니다.  
@@ -82,9 +82,10 @@ Hybrid retrieval 최적화를 잘못했는지 원래 느린건지,
 KURE-v1, bge-m3, jina-embeddings-v3 모델만 비교하였습니다.  
 Time은 전체 데이터 평가에 걸린 총 시간의 합입니다.
 
-|Model Name|Recall@5(10)|nDCG@5(10)|MRR@5(10)|Time(hour:min.)|
+|Model Name|Recall@5(10)|nDCG@5(10)|MRR@5(10)|Time(min.:sec.)|
 |---|---|---|---|:---:|
-|nlpai-lab/KURE-v1|**0.728(0.802)**|**0.605(0.629)**|**0.563(0.573)**|07:50|
-|BAAI/bge-m3|0.657()|0.539()|0.500()|07:38|
-|jinaai/jina-embeddings-v3|()|()|()||
+|nlpai-lab/KURE-v1|**0.728(0.802)**|**0.605(0.629)**|**0.563(0.573)**|39:50|
+|BAAI/bge-m3|0.657(0.735)|0.539(0.564)|0.500(0.510)|39:50|
+|jinaai/jina-embeddings-v3|0.447(0.525)|0.352(0.378)|0.321(0.331)|32:42|
 
+'
