@@ -72,7 +72,7 @@ Time은 1만개 데이터셋 총 평가에 걸린 시간입니다.
 |BM25|0.792(0.815)|0.736(0.744)|0.718(0.721)|64|
 
 간단하게 평가를 진행했지만, 고려대학교에서 발표한 CachedGISTEmbedLoss와  
-hard negative dataset을 이용해서 학습한 KURE-v1 모델이 가장 성능이 높았습니다.  
+hard negative dataset을 이용해 contrastive learning으로로 학습한 KURE-v1 모델이 가장 성능이 높았습니다.  
 또한, Hybrid retrieval을 했을 때 오히려 성능이 낮아지는 모습을 보였습니다.  
 
 
