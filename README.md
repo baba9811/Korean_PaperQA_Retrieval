@@ -1,7 +1,7 @@
 # Korean PaperQA Retrieval
-### 한국어 embeddig/retrieval evaluation용 데이터셋
-### 국내논문 QA 데이터셋 사용하여 구축하였습니다.
-### link: https://aida.kisti.re.kr/data/21b21974-6efd-4581-b9df-699f91f5bc98
+### 한국어 embeddig/retrieval evaluation
+### 국내논문 QA 데이터셋 사용하여 평가하였습니다.
+#### link: https://aida.kisti.re.kr/data/21b21974-6efd-4581-b9df-699f91f5bc98
 
 기존 국내논문 QA 데이터셋에서 "context", "qas"를 사용하여 구축하였습니다.  
 ```
@@ -30,12 +30,14 @@ level: 0,1,2 각각에 해당하는 데이터셋 274,779개씩 포함하여,
 ### Retrieval Evaluation
 
 #### Random Sampled Dataset
+
 Repository 내 data directory 안의 데이터셋은 총 824,337개의 전체 데이터 셋 중에서  
 10,000개를 랜덤 샘플링하여 구성한 데이터셋입니다.  
 데이터셋 예시는 아래와 같습니다.
 
 ```
     {
+        "id": 33
         "level": 1,
         "question": "SNEP를 사용하기 위해 무엇이 필요한가?",
         "context": [
@@ -50,8 +52,7 @@ Repository 내 data directory 안의 데이터셋은 총 824,337개의 전체 �
              스테이션의 브로드캐스팅을 인증할 수 있는데 이는 시간의 지연을 두고 대칭키를 공표함으로\
              이루어진"
         ],
-        "answer": "통신하기를 원하는 두 노드 간에 pairwise key를 공유",
-        "id": 33
+        "answer": "통신하기를 원하는 두 노드 간에 pairwise key를 공유", 
     }
 ```
 
@@ -77,6 +78,7 @@ Time은 1만개 데이터셋 총 평가에 걸린 시간입니다.
 hard negative dataset을 이용해 contrastive learning으로로 학습한 KURE-v1 모델이 가장 성능이 높았습니다.  
 또한, Hybrid retrieval을 했을 때 오히려 성능이 낮아지는 모습을 보였습니다.  
 
+#### Total Dataset
 
 다음은 데이터셋 824,337개 전체에 대해 실험한 결과입니다.  
 실험은 RTX 3090 24GB GPU와 FAISS-GPU를 사용하여 평가하였습니다.  
