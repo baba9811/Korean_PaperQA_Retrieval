@@ -27,10 +27,13 @@
 level: 0,1,2 각각에 해당하는 데이터셋 274,779개씩 포함하여,  
 총 824,337개의 데이터셋을 구축하였습니다.
 
-### Data Sample
+### Retrieval Evaluation
+
+#### Random Sampled Dataset
 Repository 내 data directory 안의 데이터셋은 총 824,337개의 전체 데이터 셋 중에서  
-10,000개를 랜덤 샘플링하여 구성한 sample.json 데이터셋입니다.  
+10,000개를 랜덤 샘플링하여 구성한 데이터셋입니다.  
 데이터셋 예시는 아래와 같습니다.
+
 ```
     {
         "level": 1,
@@ -52,7 +55,6 @@ Repository 내 data directory 안의 데이터셋은 총 824,337개의 전체 �
     }
 ```
 
-### Retrieval Evaluation
 고려대학교 nlpai-lab의 KURE-v1, BAAI의 bge-m3 모델과  
 jinaai의 jina-embeddings-v3를 original retriever,  
 BM25와 hybrid retrieval 방식으로 비교하였습니다.  
